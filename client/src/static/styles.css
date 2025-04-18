@@ -1,0 +1,177 @@
+/* src/static/styles.css */
+
+/* Ensure the html and body take up 100% of the height */
+html, body {
+    height: 100%;
+    margin: 0;  /* Remove any default margins */
+}
+
+/* Color Palette */
+:root {
+    --primary: #C3D3D7; /* Light Gray */
+    --secondary: #929B38; /* Olive Green */
+    --accent: #594C33; /* Dark Brown */
+    --background: #F1E7D6; /* Light Beige */
+    --cta: #E64725; /* Red */
+    --white: #FFFFFF; /* White */
+    --black: #010101; /* Black */
+
+    /* Typography */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-body: 1.125rem;
+    --font-size-small: 0.95rem;
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+    --line-height-body: 1.6;
+}
+
+/* Global Typography */
+body {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-body);
+    color: var(--black);
+    background-color: var(--background);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary);
+    margin: 0 0 0.5em;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+@media (max-width: 768px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+  
+
+h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    color: var(--accent);
+}
+
+p {
+    font-size: var(--font-size-body);
+    color: var(--accent);
+    line-height: var(--line-height-body);
+}
+
+/* Page Container (Reusable on multiple pages) */
+.page-container {
+    width: 100%;
+    padding: 0 2rem; /* Bootstrap-like side padding */
+    max-width: 100%; /* prevent overflow */
+    box-sizing: border-box;
+    margin-top: 4rem; /* Push content down a bit */
+    background-color: var(--white); /* Add a background to differentiate */
+}
+
+/* Full width flexbox container for homepage */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Instead of height: 100vh to allow growth */
+    background-color: var(--background);
+    padding: 40px 20px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+/* Styling the logo image */
+.logo-img {
+    width: 200px;  /* Set the desired width */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;  /* To ensure no extra space below the image */
+    margin: 20px 0;  /* Space above and below the image */
+    max-width: 100%;  /* Ensure the image doesn't overflow its container */
+}
+
+/* Card styles */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card button {
+    padding: 10px 20px;
+    background-color: var(--cta); /* Red button */
+    color: var(--white);  /* White text */
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.card button:hover {
+    background-color: var(--secondary); /* Olive Green on hover */
+}
+
+/* Contact Form Specific Styles */
+form {
+    background-color: var(--white);  /* Ensure background is white */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Add subtle shadow */
+}
+
+form .form-control {
+    margin-bottom: 15px;
+}
+
+button[type="submit"] {
+    background-color: var(--cta); /* Red button */
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--secondary); /* Button hover effect */
+}
+
+/* Contact Page Specific Styles */
+.contact-container {
+    text-align: center;
+}
+
+.contact-container h1,
+.contact-container h2 {
+    color: var(--primary);
+}
+
+/* Links */
+.read-the-docs {
+    color: var(--secondary); /* Olive Green */
+    font-size: 1em;
+    margin-top: 20px;
+}

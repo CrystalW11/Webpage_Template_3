@@ -1,0 +1,87 @@
+/* src/static/nav.css */
+
+/* Color Palette */
+:root {
+  --primary: #C3D3D7;  /* Light Gray */
+  --secondary: #929B38; /* Olive Green */
+  --accent: #594C33;  /* Dark Brown */
+  --background: #F1E7D6; /* Light Beige */
+  --cta: #E64725;  /* Red */
+  --white: #FFFFFF;  /* White */
+  --black: #010101;  /* Black */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--primary);
+  padding: 10px 20px;
+  width: 100%;  /* Ensure the navbar takes up the full width */
+  display: flex; /* Flexbox layout */
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.navbar-logo img {
+  max-height: 50px;
+  width: auto;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex; /* Flex to align items in a row */
+  justify-content: flex-start; /* Align links to the right */
+  padding-left: 20px;
+  margin-bottom: 0;
+  margin-right: 15px;
+}
+
+.navbar-links .nav-link {
+  color: var(--black);  /* Set the link color */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  margin-left: 20px; /* Space between links */
+  transition: color 0.3s ease-in-out;
+}
+
+/* On hover, change link color */
+.navbar-links .nav-link:hover {
+  color: var(--cta);
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar-links .nav-link {
+    font-size: 1.2rem;
+    margin-left: 0;
+    margin-bottom: 10px; /* Space between links on mobile */
+    color: var(--black); /* Ensure font color is black */
+  }
+
+  /* Ensure the collapse section works on mobile */
+  .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-collapse.show {
+    display: block;
+  }
+}
+
+/* Hamburger button */
+.navbar-toggler {
+  border-color: var(--cta);
+}
+
+.navbar-toggler-icon {
+  background-color: var(--cta);
+}
+

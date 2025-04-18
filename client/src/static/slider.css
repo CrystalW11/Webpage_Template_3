@@ -1,0 +1,51 @@
+/* src/static/slider.css */
+/* Color Palette */
+:root {
+    --primary: #C3D3D7; /* Light Gray */
+    --secondary: #929B38; /* Olive Green */
+    --accent: #594C33; /* Dark Brown */
+    --background: #F1E7D6; /* Light Beige */
+    --cta: #E64725; /* Red */
+    --white: #FFFFFF; /* White */
+    --black: #010101; /* Black */
+
+    /* Typography */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-size-h1: 2.5rem;
+    --font-size-h2: 2rem;
+    --font-size-body: 1.125rem;
+    --font-size-small: 0.95rem;
+    --font-weight-regular: 400;
+    --font-weight-medium: 600;
+    --font-weight-bold: 700;
+    --line-height-body: 1.6;
+}
+
+/* Container to hold the image */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Set desired height */
+    overflow: hidden;
+  }
+  
+  /* Image styling */
+  .slider-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  
+  /* Fade-in class */
+  .fade-in {
+    opacity: 1;
+  }
+  
+  /* Fade-out class */
+  .fade-out {
+    opacity: 0;
+  }
+  
